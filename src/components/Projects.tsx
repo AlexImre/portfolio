@@ -5,7 +5,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import calendar1 from '@/images/photos/calendar1-portrait.png'
 import calendar2 from '@/images/photos/calendar2-portrait.png'
 import calendar3 from '@/images/photos/calendar3-portrait.png'
-import web3pal5 from '@/images/photos/web3pal5.png'
+import web3pal5 from '../images/photos/web3pal5.png'
 
 const AmiusProjects = [
   {
