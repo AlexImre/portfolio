@@ -82,9 +82,9 @@ function Resume() {
   let resume: Array<Role> = [
     {
       company: 'Amius - Finance',
-      title: 'Frontend Software Developer',
+      title: 'Software Developer',
       logo: cocoa,
-      start: '2019',
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
@@ -94,8 +94,8 @@ function Resume() {
       company: 'Leadsie - SAAS',
       title: 'Software Developer',
       logo: leadsie,
-      start: '2014',
-      end: '2019',
+      start: '2022',
+      end: '2023',
     },
     {
       company: 'Accenture - Stategy & Consulting',
@@ -127,7 +127,6 @@ function Resume() {
       </ol>
       <Button
         href="/CV.pdf"
-        // target="_blank"
         variant="secondary"
         className="group mt-6 w-full"
         download="Alexandre_Imre_CV.pdf"
@@ -151,38 +150,38 @@ function Skills() {
       <div className="flex h-full flex-col items-center justify-center gap-6 space-y-4 py-4">
         <div className="flex w-full justify-center gap-4">
           <img
-            width="75"
+            width="70"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
           />
           <img
-            width="75"
+            width="70"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
           />
 
           <img
-            width="75"
+            width="70"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
           />
 
           <img
-            width="75"
+            width="70"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
           />
         </div>
 
         <div className="flex w-full justify-center gap-4">
           <img
-            width="75"
+            width="70"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg"
           />
 
           <img
-            width="75"
+            width="70"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
           />
 
           <img
-            width="75"
+            width="70"
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
           />
         </div>

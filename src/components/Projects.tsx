@@ -22,7 +22,7 @@ const AmiusProjects = [
   },
   {
     title: 'Static Data Editing Tool ',
-    description: 'Large complex forms using React Hook Form',
+    description: 'Large complex forms using RHF',
   },
 ]
 
@@ -47,12 +47,12 @@ export default function Projects() {
           return (
             <div
               key={project.title}
-              className="flex flex-col items-center justify-center rounded-2xl border border-zinc-100 bg-zinc-200 p-6 dark:border-zinc-700/40 dark:bg-zinc-800"
+              className="flex w-full flex-col items-center justify-center rounded-2xl border border-zinc-100 bg-zinc-200 p-6 dark:border-zinc-700/40 dark:bg-zinc-800"
             >
               <p className="text-lg font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
                 {project.title}
               </p>
-              <p className="text-base text-zinc-600 dark:text-zinc-400">
+              <p className="text-center text-base text-zinc-600 dark:text-zinc-400">
                 {project.description}
               </p>
             </div>
@@ -69,14 +69,7 @@ export default function Projects() {
         Built with React, TypeScript and TanStack Query. Uses InstantDB for
         Backend and Database.
       </p>
-      <div className="flex items-center justify-center gap-4 py-6">
-        <Image
-          src="/images/photos/calendar1-portrait.png"
-          alt=""
-          width={300}
-          height={100}
-          unoptimized
-        />
+      <div className="flex flex-wrap items-center justify-center gap-4 py-6">
         <Image
           src="/images/photos/calendar2-portrait.png"
           alt=""
@@ -86,6 +79,13 @@ export default function Projects() {
         />
         <Image
           src="/images/photos/calendar3-portrait.png"
+          alt=""
+          width={300}
+          height={100}
+          unoptimized
+        />
+        <Image
+          src="/images/photos/calendar1-portrait.png"
           alt=""
           width={300}
           height={100}
