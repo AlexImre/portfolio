@@ -42,9 +42,9 @@ export default function Projects() {
       </p>
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
         The majority of my work over the last 2 years has been in a professional
-        capacity which I can’t share! It’s tucked away in private GitLab repo,
-        but see below for some of the key things I've helped to design and
-        build.
+        capacity which I can&apos;t share! It’s tucked away in private GitLab
+        repo, but see below for some of the key things I&apos;ve helped to
+        design and build.
       </p>
       <div className="flex flex-wrap items-center justify-center gap-4 py-6">
         {AmiusProjects.map((project) => {
