@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'Alex Imre - Frontend Software Developer',
   },
   description:
-    'I’m Alex, I spent 7 years in management consulting before I found the courage to teach myself how to code, throwing myself into a career that I was passionate about and believed I could be great at.',
+    "🚀 I'm Alex, I work closely with users to design and ship impactful products that help them do more.",
   icons: {
     icon: '/favicon.ico',
   },
