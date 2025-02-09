@@ -34,7 +34,8 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Projects."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      intro="I’ve worked on tons of little projects over the years, from helping entrepreneurs bring their ideas to life, to mucking around
+      building side projects and self-studying CS fundamentals. See below for a summary of my recent proffessional work, and some personal projects that im particularly proud of."
     >
       <p className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
         Professional Work

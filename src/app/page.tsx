@@ -299,7 +299,7 @@ export default async function Home() {
       <Projects />
       <Container className="mt-12 md:mt-14">
         <h6 className="py-6 text-2xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
-          Other skills I&apos;ve picked up along the way
+          Some other skills I&apos;ve picked up along the way
         </h6>
         <AdditionalSkills />
       </Container>
