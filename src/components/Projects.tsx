@@ -2,10 +2,6 @@
 import Image from 'next/image'
 
 import { SimpleLayout } from '@/components/SimpleLayout'
-import calendar1 from '@/images/photos/calendar1-portrait.png'
-import calendar2 from '@/images/photos/calendar2-portrait.png'
-import calendar3 from '@/images/photos/calendar3-portrait.png'
-import web3pal5 from '../images/photos/web3pal5.png'
 
 const AmiusProjects = [
   {
@@ -74,9 +70,27 @@ export default function Projects() {
         Backend and Database.
       </p>
       <div className="flex items-center justify-center gap-4 py-6">
-        <Image src={calendar2} alt="" className="w-75" unoptimized />
-        <Image src={calendar3} alt="" className="w-75" unoptimized />
-        <Image src={calendar1} alt="" className="w-75" unoptimized />
+        <Image
+          src="/images/photos/calendar1-portrait.png"
+          alt=""
+          width={300}
+          height={100}
+          unoptimized
+        />
+        <Image
+          src="/images/photos/calendar2-portrait.png"
+          alt=""
+          width={300}
+          height={100}
+          unoptimized
+        />
+        <Image
+          src="/images/photos/calendar3-portrait.png"
+          alt=""
+          width={300}
+          height={100}
+          unoptimized
+        />
       </div>
 
       <p className="pt-6 text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
@@ -88,7 +102,14 @@ export default function Projects() {
         industry. Built with React / Next.Js & TypeScript.
       </p>
       <div className="flex items-center justify-center gap-4 py-6">
-        <Image src={web3pal5} alt="" className="rounded-lg" unoptimized />
+        <Image
+          src="/images/photos/web3pal5.png"
+          alt=""
+          width={1000}
+          height={10}
+          className="rounded-lg"
+          unoptimized
+        />
       </div>
     </SimpleLayout>
   )
