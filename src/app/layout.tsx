@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   },
   description:
     'I’m Alex, I spent 7 years in management consulting before I found the courage to teach myself how to code, throwing myself into a career that I was passionate about and believed I could be great at.',
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({
