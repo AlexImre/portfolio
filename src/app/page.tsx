@@ -127,6 +127,7 @@ function Resume() {
       </ol>
       <Button
         href="/CV.pdf"
+        target="_blank"
         variant="secondary"
         className="group mt-6 w-full"
         download="Alexandre_Imre_CV.pdf"
@@ -248,17 +249,17 @@ export default async function Home() {
           Frontend Software Developer.<span className="text-teal-200">*</span>
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          🚀 I&apos;m Alex, I work closely with users to design and ship
+          🚀 I&apos;m Alex, I work closely with users to design and ship{' '}
           impactful products that help them do more.{' '}
           <strong className="text-teal-400">TypeScript</strong> and
           <strong className="text-teal-400"> React</strong> is my current go-to
           stack.
         </p>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Currently, you'll find me working in{' '}
+          Currently, you&apos;ll find me working in{' '}
           <strong className="text-teal-400">financial services</strong>, where
-          I'm building out a suite of web apps that will help the company to
-          scale its business and capture new clients.
+          I&apos;m building out a suite of web apps that will help the company
+          to scale its business and capture new clients.
         </p>
         <p className="mt-6 text-base text-xs text-teal-200 text-zinc-600 italic dark:text-teal-200">
           *with 7 years of former management consulting experience.

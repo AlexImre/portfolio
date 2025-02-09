@@ -42,12 +42,12 @@ export default function Projects() {
         repo, but see below for some of the key things I&apos;ve helped to
         design and build.
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-4 py-6">
+      <div className="flex w-full flex-wrap items-center justify-center gap-4 py-6">
         {AmiusProjects.map((project) => {
           return (
             <div
               key={project.title}
-              className="flex w-full flex-col items-center justify-center rounded-2xl border border-zinc-100 bg-zinc-200 p-6 dark:border-zinc-700/40 dark:bg-zinc-800"
+              className="flex w-full flex-col items-center justify-center rounded-2xl border border-zinc-100 bg-zinc-200 p-6 sm:w-fit dark:border-zinc-700/40 dark:bg-zinc-800"
             >
               <p className="text-lg font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
                 {project.title}
