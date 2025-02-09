@@ -14,7 +14,7 @@ const AmiusProjects = [
   },
   {
     title: ' Portfolio Management Tool',
-    description: 'Risk management, with ability to execute trades',
+    description: 'Risk management, with trade execution',
   },
   {
     title: 'Order Management System',
@@ -99,7 +99,9 @@ export default function Projects() {
       <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
         When I was self-teaching, I partnered up with a crypto capital raising
         firm and we tried to build a solution to a common problem in the
-        industry. Built with React / Next.Js & TypeScript.
+        industry. Faster invoice payments, and less pay disputes via direct
+        on-chain payments between crypto wallets. Built with React / Next.Js &
+        TypeScript.
       </p>
       <div className="flex items-center justify-center gap-4 py-6">
         <Image

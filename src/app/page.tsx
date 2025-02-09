@@ -245,18 +245,23 @@ export default async function Home() {
     <>
       <Container className="mt-9">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Frontend Software Developer.
+          Frontend Software Developer.<span className="text-teal-200">*</span>
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I’m Alex, I spent 7 years in management consulting before I found the
-          courage to teach myself how to code, throwing myself into a career
-          that I was passionate about and believed I could be great at.
+          🚀 I&apos;m Alex, I work closely with users to design and ship
+          impactful products that help them do more.{' '}
+          <strong className="text-teal-400">TypeScript</strong> and
+          <strong className="text-teal-400"> React</strong> is my current go-to
+          stack.
         </p>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          I started with a little bit of C++ and Python during my physics
-          studies, but JavaScript was the first language I really dived into,
-          kicking off my new career as a developer. TypeScript and React quickly
-          followed!
+          Currently, you'll find me working in{' '}
+          <strong className="text-teal-400">financial services</strong>, where
+          I'm building out a suite of web apps that will help the company to
+          scale its business and capture new clients.
+        </p>
+        <p className="mt-6 text-base text-xs text-teal-200 text-zinc-600 italic dark:text-teal-200">
+          *with 7 years of former management consulting experience.
         </p>
       </Container>
       <Container className="mt-12 md:mt-14">
