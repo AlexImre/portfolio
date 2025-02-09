@@ -1,9 +1,9 @@
 import Image, { type ImageProps } from 'next/image'
 import Link from 'next/link'
 
-import Projects from '@/app/Projects'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
+import Projects from '@/components/Projects'
 import { LinkedInIcon } from '@/components/SocialIcons'
 import accenture from '@/images/logos/accenture.webp'
 import cocoa from '@/images/logos/cocoa.webp'
@@ -275,22 +275,20 @@ export default async function Home() {
   return (
     <>
       <Container className="mt-9">
-        <div className="max-w-2xl">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Frontend Software Developer.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Alex, I spent 7 years in management consulting before I found
-            the courage to teach myself how to code, throwing myself into a
-            career that I was passionate about and believed I could be great at.
-          </p>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I started with a little bit of C++ and Python during my physics
-            studies, but JavaScript was the first language I really dived into,
-            kicking off my new career as a developer. TypeScript and React
-            quickly followed!
-          </p>
-        </div>
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+          Frontend Software Developer.
+        </h1>
+        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          I’m Alex, I spent 7 years in management consulting before I found the
+          courage to teach myself how to code, throwing myself into a career
+          that I was passionate about and believed I could be great at.
+        </p>
+        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+          I started with a little bit of C++ and Python during my physics
+          studies, but JavaScript was the first language I really dived into,
+          kicking off my new career as a developer. TypeScript and React quickly
+          followed!
+        </p>
       </Container>
       <Container className="mt-12 md:mt-14">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-10 lg:max-w-none lg:grid-cols-2">
