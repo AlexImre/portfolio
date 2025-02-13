@@ -33,10 +33,10 @@ export default function Projects() {
       intro="I’ve worked on tons of little projects over the years, from helping entrepreneurs bring their ideas to life, to mucking around
       building side projects and self-studying CS fundamentals. See below for a summary of my recent proffessional work, and some personal projects that im particularly proud of."
     >
-      <p className="text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+      <p className="text-3xl font-bold tracking-tight text-zinc-100">
         Professional Work
       </p>
-      <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+      <p className="mt-6 text-base text-zinc-400">
         The majority of my work over the last 2 years has been in a professional
         capacity which I can&apos;t share! It’s tucked away in private GitLab
         repo, but see below for some of the key things I&apos;ve helped to
@@ -47,12 +47,12 @@ export default function Projects() {
           return (
             <div
               key={project.title}
-              className="flex w-full flex-col items-center justify-center rounded-2xl border border-zinc-100 bg-zinc-200 p-6 sm:w-fit dark:border-zinc-700/40 dark:bg-zinc-800"
+              className="flex w-full flex-col items-center justify-center rounded-2xl border border-zinc-700/40 bg-zinc-800 p-6 sm:w-fit"
             >
-              <p className="text-lg font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+              <p className="text-lg font-bold tracking-tight text-zinc-100">
                 {project.title}
               </p>
-              <p className="text-center text-base text-zinc-600 dark:text-zinc-400">
+              <p className="text-center text-base text-zinc-400">
                 {project.description}
               </p>
             </div>
@@ -60,10 +60,10 @@ export default function Projects() {
         })}
       </div>
 
-      <p className="pt-6 text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+      <p className="pt-6 text-3xl font-bold tracking-tight text-zinc-100">
         Shared Calendar
       </p>
-      <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+      <p className="mt-6 text-base text-zinc-400">
         Here are a few snaps of a shared calendar I built so that my friends and
         I could be more organised and less flaky when organising group events.
         Built with React, TypeScript and TanStack Query. Uses InstantDB for
@@ -93,10 +93,10 @@ export default function Projects() {
         />
       </div>
 
-      <p className="pt-6 text-3xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+      <p className="pt-6 text-3xl font-bold tracking-tight text-zinc-100">
         Web3Pal
       </p>
-      <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+      <p className="mt-6 text-base text-zinc-400">
         When I was self-teaching, I partnered up with a crypto capital raising
         firm and we tried to build a solution to a common problem in the
         industry. Faster invoice payments, and less pay disputes via direct

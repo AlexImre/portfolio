@@ -23,7 +23,7 @@ function SocialLink({
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <Icon className="h-6 w-6 fill-zinc-400 transition group-hover:fill-zinc-300" />
     </Link>
   )
 }
@@ -57,16 +57,14 @@ function Role({ role }: { role: Role }) {
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
-        <dd className="w-full flex-none text-sm font-medium text-zinc-900 dark:text-zinc-100">
+        <dd className="w-full flex-none text-sm font-medium text-zinc-100">
           {role.company}
         </dd>
         <dt className="sr-only">Role</dt>
-        <dd className="text-xs text-zinc-500 dark:text-zinc-400">
-          {role.title}
-        </dd>
+        <dd className="text-xs text-zinc-400">{role.title}</dd>
         <dt className="sr-only">Date</dt>
         <dd
-          className="ml-auto text-xs text-zinc-400 dark:text-zinc-500"
+          className="ml-auto text-xs text-zinc-500"
           aria-label={`${startLabel} until ${endLabel}`}
         >
           <time dateTime={startDate}>{startLabel}</time>{' '}
@@ -107,8 +105,8 @@ function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex justify-between text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <div className="rounded-2xl border border-zinc-700/40 p-6">
+      <h2 className="flex justify-between text-sm font-semibold text-zinc-100">
         <div className="flex">
           <BriefcaseIcon className="h-6 w-6 flex-none" />
           <span className="ml-3">Work</span>
@@ -133,7 +131,7 @@ function Resume() {
         download="Alexandre_Imre_CV.pdf"
       >
         Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        <ArrowDownIcon className="h-4 w-4 transition group-hover:stroke-zinc-50 group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
@@ -141,8 +139,8 @@ function Resume() {
 
 function Skills() {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex justify-between text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+    <div className="rounded-2xl border border-zinc-700/40 p-6">
+      <h2 className="flex justify-between text-sm font-semibold text-zinc-100">
         <div className="flex">
           <SkillsIcon />
           <span className="ml-3">Key Skills</span>
@@ -150,41 +148,58 @@ function Skills() {
       </h2>
       <div className="flex h-full flex-col items-center justify-center gap-6 space-y-4 py-4">
         <div className="flex w-full justify-center gap-4">
-          <img
-            width="70"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-          />
-          <img
-            width="70"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-          />
-
-          <img
-            width="70"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-          />
-
-          <img
-            width="70"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-          />
+          <div className="flex flex-col items-center">
+            <img
+              width="70"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+            />
+            <span className="mt-2 text-sm text-zinc-400">HTML5</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              width="70"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+            />
+            <span className="mt-2 text-sm text-zinc-400">CSS3</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              width="70"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            />
+            <span className="mt-2 text-sm text-zinc-400">JavaScript</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              width="70"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+            />
+            <span className="mt-2 text-sm text-zinc-400">TypeScript</span>
+          </div>
         </div>
 
         <div className="flex w-full justify-center gap-4">
-          <img
-            width="70"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain-wordmark.svg"
-          />
-
-          <img
-            width="70"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
-          />
-
-          <img
-            width="70"
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
-          />
+          <div className="flex flex-col items-center">
+            <img
+              width="70"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-plain.svg"
+            />
+            <span className="mt-2 text-sm text-zinc-400">Git</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              width="70"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            />
+            <span className="mt-2 text-sm text-zinc-400">React</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <img
+              width="70"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
+            />
+            <span className="mt-2 text-sm text-zinc-400">Redux</span>
+          </div>
         </div>
       </div>
     </div>
@@ -193,7 +208,7 @@ function Skills() {
 
 function AdditionalSkills() {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+    <div className="rounded-2xl border border-zinc-700/40">
       <div className="flex h-full flex-col flex-wrap items-center justify-center gap-6 space-y-4 py-4">
         <div className="flex w-full flex-wrap justify-center gap-8">
           <img
@@ -241,27 +256,27 @@ function AdditionalSkills() {
   )
 }
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
-      <Container className="mt-9">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
+      <Container>
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-100 sm:text-5xl">
           Frontend Software Developer.<span className="text-teal-200">*</span>
         </h1>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+        <p className="mt-6 text-base text-zinc-400">
           🚀 I&apos;m Alex, I work closely with users to design and ship{' '}
           impactful products that help them do more.{' '}
           <strong className="text-teal-400">TypeScript</strong> and
           <strong className="text-teal-400"> React</strong> is my current go-to
           stack.
         </p>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+        <p className="mt-6 text-base text-zinc-400">
           Currently, you&apos;ll find me working in{' '}
           <strong className="text-teal-400">financial services</strong>, where
           I&apos;m building out a suite of web apps that will help the company
           to scale its business and capture new clients.
         </p>
-        <p className="mt-6 text-base text-xs text-teal-200 text-zinc-600 italic dark:text-teal-200">
+        <p className="mt-6 text-base text-xs text-teal-200 italic">
           *with 7 years of former management consulting experience.
         </p>
       </Container>
@@ -273,7 +288,7 @@ export default async function Home() {
       </Container>
       <Projects />
       <Container className="mt-12 md:mt-14">
-        <h6 className="py-6 text-2xl font-bold tracking-tight text-zinc-800 sm:text-2xl dark:text-zinc-100">
+        <h6 className="py-6 text-2xl font-bold tracking-tight text-zinc-100 sm:text-2xl">
           Some other skills I&apos;ve picked up along the way
         </h6>
         <AdditionalSkills />
