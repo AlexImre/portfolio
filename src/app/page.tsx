@@ -200,6 +200,16 @@ function Skills() {
             />
             <span className="mt-2 text-sm text-zinc-400">Redux</span>
           </div>
+          <div className="flex flex-col items-center">
+            <Image
+              src="/images/photos/aggrid.png"
+              alt=""
+              width={70}
+              height={100}
+              unoptimized
+            />
+            <span className="mt-2 text-sm text-zinc-400">AG Grid</span>
+          </div>
         </div>
       </div>
     </div>
