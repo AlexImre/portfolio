@@ -1,36 +1,63 @@
 @import 'tailwindcss';
-@import './prism.css' layer(components);
-
-@plugin '@tailwindcss/typography';
-@config '../../typography.ts';
-
-@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --text-xs: 0.8125rem;
-  --text-xs--line-height: 1.5rem;
-  --text-sm: 0.875rem;
-  --text-sm--line-height: 1.5rem;
-  --text-base: 1rem;
-  --text-base--line-height: 1.75rem;
-  --text-lg: 1.125rem;
-  --text-lg--line-height: 1.75rem;
-  --text-xl: 1.25rem;
-  --text-xl--line-height: 2rem;
-  --text-2xl: 1.5rem;
-  --text-2xl--line-height: 2rem;
-  --text-3xl: 1.875rem;
-  --text-3xl--line-height: 2.25rem;
-  --text-4xl: 2rem;
-  --text-4xl--line-height: 2.5rem;
-  --text-5xl: 3rem;
-  --text-5xl--line-height: 3.5rem;
-  --text-6xl: 3.75rem;
-  --text-6xl--line-height: 1;
-  --text-7xl: 4.5rem;
-  --text-7xl--line-height: 1;
-  --text-8xl: 6rem;
-  --text-8xl--line-height: 1;
-  --text-9xl: 8rem;
-  --text-9xl--line-height: 1;
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --color-ink: #e9e9ec;
+  --color-ink-muted: #9a9aa2;
+  --color-ink-faint: #8a8a92;
+  --color-accent: #3ecf8e;
+  --color-canvas: #050506;
+  --color-panel: #0b0b0e;
+  --color-card: #111114;
+}
+
+/* ── Art-directed keyframes (ported from the design canvas) ────────────── */
+@keyframes trace-flow {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+@keyframes node-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px rgba(62, 207, 142, 0.4),
+      0 0 20px -8px rgba(62, 207, 142, 0.55);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(62, 207, 142, 0.7),
+      0 0 30px -4px rgba(62, 207, 142, 0.85);
+  }
+}
+@keyframes line-flow {
+  from {
+    background-position: 0 -120%;
+  }
+  to {
+    background-position: 0 120%;
+  }
+}
+
+/* ── Page shell ────────────────────────────────────────────────────────── */
+html {
+  color-scheme: dark;
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  background-color: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }
