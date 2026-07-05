@@ -17,9 +17,7 @@ function EmailRow() {
       await navigator.clipboard.writeText(IDENTITY.email)
       setCopied(true)
       setTimeout(() => setCopied(false), 1500)
-    } catch {
-      /* clipboard unavailable — ignore */
-    }
+    } catch {}
   }
 
   return (
@@ -51,8 +49,6 @@ function EmailRow() {
 const iconLink = 'flex-none text-ink-muted transition hover:text-accent'
 const divider = 'hidden h-5 w-px flex-none bg-white/10 sm:block'
 
-// A self-contained contact "island" — a centered pill that sits just beneath
-// the hero content.
 export function ContactIsland() {
   return (
     <div className="flex justify-center">

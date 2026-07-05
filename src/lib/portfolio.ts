@@ -9,7 +9,8 @@ export const IDENTITY = {
   name: 'Alexandre Imre',
   role: 'Software Developer',
   location: 'London',
-  headline: 'From the first idea to shipped code, I bring impact at every stage.',
+  headline:
+    'From the first idea to shipped code, I bring impact at every stage.',
   intro:
     "Ten years across the delivery lifecycle. 7 as a management consultant in financial services and 3 as a software engineer building an OTC risk platform in agricultural commodities, with a physicist's habit of thinking from first principles.",
   email: 'alexandre.imre@gmail.com',
@@ -25,7 +26,6 @@ export const DOMAINS = [
   'Regulation',
 ]
 
-// The five lifecycle stages — the primary nodes on the circuit.
 export interface Stage {
   n: string
   label: string
@@ -55,14 +55,14 @@ export const STAGES: Stage[] = [
     label: 'Design + Build',
     tag: '3Y ENGINEERING · 2 FE / 1 BE',
     techs: ['C#', '.NET', 'TypeScript', 'React', 'SQL'],
-    body: 'Three years shipping an OTC risk-management platform in agricultural commodities — two on the frontend, one on the backend, owning both the interface and the logic beneath it.',
+    body: 'Three years shipping an OTC risk-management platform in agricultural commodities - two on the frontend, one on the backend, owning both the interface and the logic beneath it.',
   },
   {
     n: '04',
     label: 'QA / Test',
     tag: 'DOMAIN-DRIVEN TESTING',
     meta: 'Technical skills · domain-driven testing loop',
-    body: 'Tight feedback loops, validated against real trading and risk scenarios rather than toy cases — because in commodities risk, edge cases are the whole point.',
+    body: 'Tight feedback loops, validated against real trading and risk scenarios rather than toy cases - because in commodities risk, edge cases are the whole point.',
   },
   {
     n: '05',
@@ -105,7 +105,12 @@ export const SUPPORT_NODES: SupportNode[] = [
   { label: 'Stakeholder mgmt', x: 300, y: 84 },
   { label: 'Business analysis', x: 250, y: 412 },
   { label: 'Communication skills', x: 470, y: 108 },
-  { label: 'Technical skills', x: 620, y: 400, techs: ['C#', '.NET', 'TypeScript', 'React', 'SQL'] },
+  {
+    label: 'Technical skills',
+    x: 620,
+    y: 400,
+    techs: ['C#', '.NET', 'TypeScript', 'React', 'SQL'],
+  },
   { label: 'Project management', x: 980, y: 90 },
   { label: 'DevOps · CI/CD', x: 1040, y: 405 },
 ]
