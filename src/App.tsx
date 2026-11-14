@@ -1,65 +1,202 @@
 import { Analytics } from '@vercel/analytics/react'
+import { Fragment, type ReactNode } from 'react'
 
-import { DomainsCard } from '@/components/Cards'
-import { CircuitDiagram } from '@/components/CircuitDiagram'
-import { MobileFlow } from '@/components/MobileFlow'
-import { ContactIsland } from '@/components/Sections'
-import { IDENTITY } from '@/lib/portfolio'
+import { DOMAINS, FACTS, IDENTITY, JOBS, type Job } from '@/lib/portfolio'
 
-// Fine grid + radial dots backdrop for the framed hero panel.
-const panelGrid: React.CSSProperties = {
-  backgroundColor: '#09090b',
-  backgroundImage:
-    'linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)',
-  backgroundSize: '46px 46px',
-  backgroundPosition: '-1px -1px',
+// Turns "plain **bold** plain" into text with <b> elements.
+function rich(text: string): ReactNode {
+  return text
+    .split(/\*\*(.+?)\*\*/g)
+    .map((part, i) =>
+      i % 2 ? <b key={i}>{part}</b> : <Fragment key={i}>{part}</Fragment>,
+    )
 }
 
-function Hero() {
+function Bullets({ items }: { items: string[] }) {
   return (
-    <section
-      className="rounded-[18px] border border-white/10 p-6 sm:p-8 lg:p-10"
-      style={panelGrid}
+    <ul>
+      {items.map((b) => (
+        <li key={b}>{rich(b)}</li>
+      ))}
+    </ul>
+  )
+}
+
+function Stack({ items }: { items: string[] }) {
+  return (
+    <div className="stack">
+      {items.map((s) => (
+        <span key={s}>{s}</span>
+      ))}
+    </div>
+  )
+}
+
+function Crab() {
+  return (
+    <svg
+      className="crab"
+      viewBox="0 0 14 9"
+      shapeRendering="crispEdges"
+      aria-hidden="true"
     >
-      <div className="flex flex-col gap-8 lg:flex-row lg:items-start lg:justify-between lg:gap-10">
-        <div className="min-w-0 lg:flex-1">
-          <div className="flex flex-wrap gap-x-4 gap-y-1.5 font-mono text-[11.5px] tracking-[0.14em]">
-            <span className="text-accent">{IDENTITY.name.toUpperCase()}</span>
-            <span className="text-ink-faint">
-              {IDENTITY.role.toUpperCase()} · {IDENTITY.location.toUpperCase()}
-            </span>
+      <rect className="b" x="2" y="0" width="10" height="5" />
+      <rect className="b" x="0" y="2" width="2" height="2" />
+      <rect className="b" x="12" y="2" width="2" height="2" />
+      <rect className="e" x="4" y="1" width="1" height="2" />
+      <rect className="e" x="9" y="1" width="1" height="2" />
+      <rect className="b" x="3" y="5" width="1" height="3" />
+      <rect className="b" x="5" y="5" width="1" height="3" />
+      <rect className="b" x="8" y="5" width="1" height="3" />
+      <rect className="b" x="10" y="5" width="1" height="3" />
+    </svg>
+  )
+}
+
+function Sidebar() {
+  const { name, role, avatar, email, github, linkedin, cv, location } =
+    IDENTITY
+  return (
+    <aside className="sidebar">
+      <div className="id">
+        <img className="avatar" src={avatar} alt={name} width={96} height={96} />
+        <h1 className="name">{name}</h1>
+        <p className="role">{role}</p>
+      </div>
+
+      <nav className="contact" aria-label="Contact">
+        <a href={`mailto:${email}`}>
+          Email <span>{email}</span>
+        </a>
+        <a href={github.url} target="_blank" rel="noreferrer">
+          GitHub <span>{github.label}</span>
+        </a>
+        <a href={linkedin.url} target="_blank" rel="noreferrer">
+          LinkedIn <span>{linkedin.label}</span>
+        </a>
+      </nav>
+
+      <div className="cv-group">
+        <a className="cv" href={cv.pdf} download="Alexandre-Imre-CV.pdf">
+          Download CV <span aria-hidden="true">↓</span>
+        </a>
+        <p className="cv-alt">
+          PDF · also as{' '}
+          <a href={cv.docx} download="Alexandre-Imre-CV.docx">
+            .docx
+          </a>{' '}
+          or{' '}
+          <a href={cv.md} download="Alexandre-Imre-CV.md">
+            .md
+          </a>
+        </p>
+      </div>
+
+      <div className="facts">
+        {FACTS.map((f) => (
+          <div key={f.label}>
+            {f.label} <b>{f.value}</b>
           </div>
-          <h1 className="mt-5 max-w-[1120px] text-[27px] font-semibold leading-[1.1] tracking-[-0.02em] text-balance sm:text-[34px] lg:text-[44px]">
-            {IDENTITY.headline}
-          </h1>
-          <p className="mt-4 max-w-[980px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
-            {IDENTITY.intro}
-          </p>
-          <p className="mt-4 max-w-[980px] text-[15px] leading-[1.6] text-ink-muted sm:text-[16px]">
-          Passionate about working on challenging products that solve real problems. I bring a combination of technical and soft skills, with a curious and pragmatic mindset.
-          </p>
-        </div>
+        ))}
+        <p className="loc">{location}</p>
+      </div>
+    </aside>
+  )
+}
 
-        <DomainsCard className="w-full sm:max-w-[340px] lg:w-[300px] lg:flex-none" />
+function JobRow({ job }: { job: Job }) {
+  return (
+    <article className="job">
+      <div className="meta">
+        {job.logo && (
+          <img
+            className={job.logoPlate ? 'logo plate' : 'logo'}
+            src={job.logo}
+            alt={job.org ?? ''}
+            width={40}
+            height={40}
+          />
+        )}
+        <p className="when">{job.when}</p>
       </div>
-
-      {/* Desktop: horizontal circuit. Narrow: vertical signal-flow. */}
-      <div className="mt-8 hidden lg:mt-7 lg:block">
-        <CircuitDiagram />
+      <div className="body">
+        <h3>
+          {job.title} {job.org && <span>· {job.org}</span>}
+        </h3>
+        {job.bullets && <Bullets items={job.bullets} />}
+        {job.phases?.map((p) => (
+          <Fragment key={p.title}>
+            <h4 className="phase">
+              {p.title} <span>{p.note}</span>
+            </h4>
+            <Bullets items={p.bullets} />
+            <Stack items={p.stack} />
+          </Fragment>
+        ))}
       </div>
-      <div className="mt-9 lg:hidden">
-        <MobileFlow />
-      </div>
-    </section>
+    </article>
   )
 }
 
 export function App() {
   return (
-    <main className="mx-auto flex max-w-[1600px] flex-col gap-5 px-5 py-10 sm:px-8 sm:py-14 lg:px-10">
-      <Hero />
-      <ContactIsland />
+    <div className="page">
+      <Sidebar />
+
+      <main className="main">
+        <p className="statement">
+          I'm Alex, a full-stack developer in London. I build{' '}
+          <em>trading and post-trade systems.</em>{' '}
+          <span className="dim">
+            Before that, seven years leading projects at Accenture within
+            financial services.
+          </span>
+        </p>
+
+        <section aria-labelledby="exp-h">
+          <h2 className="label" id="exp-h">
+            Experience
+          </h2>
+          <div className="jobs">
+            {JOBS.map((job) => (
+              <JobRow key={job.when} job={job} />
+            ))}
+          </div>
+        </section>
+
+        <section aria-labelledby="dom-h">
+          <h2 className="label" id="dom-h">
+            Domains
+          </h2>
+          <ul className="chips">
+            {DOMAINS.map((d) => (
+              <li key={d}>{d}</li>
+            ))}
+          </ul>
+        </section>
+
+        <div className="rail">
+          <section className="ai" aria-labelledby="ai-h">
+            <Crab />
+            <div>
+              <h2 id="ai-h">
+                Software is <span className="glow">changing</span>
+              </h2>
+              <p>I stay on top of it. I love trying new ideas and seeing what works.</p>
+              <p>
+                Currently, I maintain a{' '}
+                <b>
+                  central repository of <code>/skills</code>
+                </b>{' '}
+                for my company. The team uses it in incident response, and it
+                has made a big difference to how fast we find and fix problems.
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+
       <Analytics />
-    </main>
+    </div>
   )
 }

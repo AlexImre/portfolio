@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/styles/tailwind.css"
+        ],
+        "createdAt": "2026-11-14T16:22:06.360Z",
+        "reason": "user confirmed: user asked for an orange gradient on the word 'changing' in the AI card"
+      }
+    ]
+  }
+}
