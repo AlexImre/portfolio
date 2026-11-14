@@ -153,6 +153,26 @@ export function App() {
           </span>
         </p>
 
+        <div className="rail">
+          <section className="ai" aria-labelledby="ai-h">
+            <Crab />
+            <div>
+              <h2 id="ai-h">
+                Software is <span className="glow">changing</span>
+              </h2>
+              <p>I stay on top of it. I love trying new ideas and seeing what works.</p>
+              <p>
+                Currently, I maintain a{' '}
+                <b>
+                  central repository of <code>/skills</code>
+                </b>{' '}
+                for my company. The team uses it in incident response, and it
+                has made a big difference to how fast we find and fix problems.
+              </p>
+            </div>
+          </section>
+        </div>
+
         <section aria-labelledby="exp-h">
           <h2 className="label" id="exp-h">
             Experience
@@ -174,26 +194,6 @@ export function App() {
             ))}
           </ul>
         </section>
-
-        <div className="rail">
-          <section className="ai" aria-labelledby="ai-h">
-            <Crab />
-            <div>
-              <h2 id="ai-h">
-                Software is <span className="glow">changing</span>
-              </h2>
-              <p>I stay on top of it. I love trying new ideas and seeing what works.</p>
-              <p>
-                Currently, I maintain a{' '}
-                <b>
-                  central repository of <code>/skills</code>
-                </b>{' '}
-                for my company. The team uses it in incident response, and it
-                has made a big difference to how fast we find and fix problems.
-              </p>
-            </div>
-          </section>
-        </div>
       </main>
 
       <Analytics />
