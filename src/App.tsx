@@ -106,7 +106,7 @@ function Sidebar() {
 
 function JobRow({ job }: { job: Job }) {
   return (
-    <article className="job">
+    <article className={job.logo ? 'job' : 'job no-logo'}>
       <div className="meta">
         {job.logo && (
           <img

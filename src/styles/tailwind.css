@@ -437,17 +437,43 @@ section {
   .main {
     padding: 44px 24px 48px;
   }
+  /* Header row: logo on the left, title with the date under it on the right. */
   .job {
-    grid-template-columns: 1fr;
-    gap: 6px;
+    grid-template-columns: 48px minmax(0, 1fr);
+    column-gap: 14px;
+    row-gap: 0;
   }
-  .meta {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .job.no-logo {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .meta,
+  .body {
+    display: contents;
+  }
+  .logo {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    width: 48px;
+    height: 48px;
+    align-self: center;
+  }
+  .job h3 {
+    grid-column: -2;
+    grid-row: 1;
+    align-self: end;
   }
   .when {
-    margin-left: auto;
+    grid-column: -2;
+    grid-row: 2;
+    align-self: start;
     padding-top: 0;
+  }
+  .body > :not(h3) {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+  }
+  .body > .phase {
+    margin-top: 16px;
+    margin-bottom: -4px;
   }
 }
