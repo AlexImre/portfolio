@@ -279,6 +279,10 @@ section {
   font-size: 15px;
   font-weight: 600;
 }
+/* Extra space before Frontend, after the Backend tags. */
+.stack + .phase {
+  margin-top: 22px;
+}
 .phase span {
   margin-left: 6px;
   font-size: 13px;
@@ -475,5 +479,8 @@ section {
   .body > .phase {
     margin-top: 16px;
     margin-bottom: -4px;
+  }
+  .body > .stack + .phase {
+    margin-top: 32px;
   }
 }
