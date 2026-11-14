@@ -442,8 +442,12 @@ section {
     gap: 6px;
   }
   .meta {
-    grid-auto-flow: column;
+    display: flex;
     align-items: center;
     gap: 12px;
+  }
+  .when {
+    margin-left: auto;
+    padding-top: 0;
   }
 }
